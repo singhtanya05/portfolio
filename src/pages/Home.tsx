@@ -25,25 +25,21 @@ const Home: React.FC = () => {
     provider: string;
   } | null>(null);
 
-  const [isCertModalOpen, setIsCertModalOpen] = useState(false);
-
   const handleCertClick = (cert: { name: string; image: string; provider: string }) => {
     setSelectedCert(cert);
-    setIsCertModalOpen(true);
   };
 
   const handleCloseCertModal = () => {
-    setIsCertModalOpen(false);
     setSelectedCert(null);
   };
 
-  // Add ESC key handler
   useEffect(() => {
     const handleEsc = (event: KeyboardEvent) => {
       if (event.key === 'Escape') {
         handleCloseCertModal();
       }
     };
+
     window.addEventListener('keydown', handleEsc);
     return () => {
       window.removeEventListener('keydown', handleEsc);
@@ -1868,54 +1864,52 @@ const Home: React.FC = () => {
         </div>
       </section>
 
-        {/* Certificate Modal */}
-        <AnimatePresence>
-          {selectedCert && (
-            <motion.div
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              exit={{ opacity: 0 }}
-              className="fixed inset-0 bg-black/50 backdrop-blur-sm z-50 flex items-center justify-center p-4"
-              onClick={handleCloseCertModal}
-            >
-              <motion.div
-                initial={{ scale: 0.9, opacity: 0 }}
-                animate={{ scale: 1, opacity: 1 }}
-                exit={{ scale: 0.9, opacity: 0 }}
-                className="bg-white rounded-2xl shadow-2xl max-w-4xl w-full max-h-[90vh] overflow-hidden"
-                onClick={(e) => e.stopPropagation()}
-              >
-                <div className="p-6 border-b border-gray-200">
-                  <div className="flex items-center justify-between">
-                    <h3 className="text-xl font-semibold text-[#03045e]">{selectedCert.name}</h3>
-                    <button
-                      onClick={handleCloseCertModal}
-                      className="text-gray-500 hover:text-gray-700 transition-colors"
-                    >
-                      <FaTimes className="text-2xl" />
-                    </button>
-                  </div>
-                  <p className="text-[#0077b6] mt-1">{selectedCert.provider}</p>
-                </div>
-                <div className="p-6 overflow-auto max-h-[calc(90vh-8rem)]">
-                  {selectedCert.image.endsWith('.pdf') ? (
-                    <iframe
-                      src={selectedCert.image}
-                      className="w-full h-[70vh] rounded-lg"
-                      title={selectedCert.name}
-                    />
-                  ) : (
-                    <img
-                      src={selectedCert.image}
-                      alt={selectedCert.name}
-                      className="w-full h-auto rounded-lg"
-                    />
-                  )}
-                </div>
-              </motion.div>
-            </motion.div>
-          )}
-        </AnimatePresence>
+      {/* Certificate Modal */}
+      {selectedCert && (
+        <motion.div
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          exit={{ opacity: 0 }}
+          className="fixed inset-0 bg-black/50 backdrop-blur-sm z-50 flex items-center justify-center p-4"
+          onClick={handleCloseCertModal}
+        >
+          <motion.div
+            initial={{ scale: 0.9, opacity: 0 }}
+            animate={{ scale: 1, opacity: 1 }}
+            exit={{ scale: 0.9, opacity: 0 }}
+            className="bg-white rounded-2xl shadow-2xl max-w-4xl w-full max-h-[90vh] overflow-hidden"
+            onClick={(e) => e.stopPropagation()}
+          >
+            <div className="p-6 border-b border-gray-200">
+              <div className="flex items-center justify-between">
+                <h3 className="text-xl font-semibold text-[#03045e]">{selectedCert.name}</h3>
+                <button
+                  onClick={handleCloseCertModal}
+                  className="text-gray-500 hover:text-gray-700 transition-colors"
+                >
+                  <FaTimes className="text-2xl" />
+                </button>
+              </div>
+              <p className="text-[#0077b6] mt-1">{selectedCert.provider}</p>
+            </div>
+            <div className="p-6 overflow-auto max-h-[calc(90vh-8rem)]">
+              {selectedCert.image.endsWith('.pdf') ? (
+                <iframe
+                  src={selectedCert.image}
+                  className="w-full h-[70vh] rounded-lg"
+                  title={selectedCert.name}
+                />
+              ) : (
+                <img
+                  src={selectedCert.image}
+                  alt={selectedCert.name}
+                  className="w-full h-auto rounded-lg"
+                />
+              )}
+            </div>
+          </motion.div>
+        </motion.div>
+      )}
       </div>
 
       <style>
