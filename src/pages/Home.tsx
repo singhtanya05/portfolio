@@ -1,15 +1,12 @@
 import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence, useScroll, useTransform } from 'framer-motion';
-import { FaGithub, FaLinkedin, FaEnvelope, FaAws, FaGoogle, FaDocker, FaTimes, FaFileDownload, FaReact } from 'react-icons/fa';
-import { SiKubernetes, SiGithub } from 'react-icons/si';
-import { SiTypescript, SiTailwindcss } from 'react-icons/si';
+import { FaGithub, FaLinkedin, FaEnvelope, FaAws, FaGoogle, FaDocker, FaTimes, FaFileDownload } from 'react-icons/fa';
 import { TypeAnimation } from 'react-type-animation';
 import photo from '../assets/photo.jpg';
 
 const Home: React.FC = () => {
   const { scrollYProgress } = useScroll();
   const gradientY = useTransform(scrollYProgress, [0, 1], [0, 30]);
-  const [isImageHovered, setIsImageHovered] = useState(false);
 
   const [selectedCert, setSelectedCert] = useState<{
     name: string;
@@ -391,8 +388,6 @@ const Home: React.FC = () => {
                 {/* Main photo container */}
                 <div 
                   className="relative group perspective-1000"
-                  onMouseEnter={() => setIsImageHovered(true)}
-                  onMouseLeave={() => setIsImageHovered(false)}
                 >
                   {/* Creative background elements */}
                   <div className="absolute -top-12 -left-12 w-48 h-48 bg-gradient-to-br from-blue-400 to-blue-600 dark:from-blue-500 dark:to-blue-700 rounded-full opacity-20 blur-2xl group-hover:opacity-30 transition-all duration-500 animate-pulse"></div>
