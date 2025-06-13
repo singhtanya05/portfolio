@@ -297,8 +297,8 @@ const Home: React.FC = () => {
                     className="text-[#0077b6] dark:text-[#90e0ef]"
                   />
                 </h1>
-                <p className="text-xl sm:text-2xl text-[#03045e] dark:text-[#caf0f8] mb-8 max-w-2xl mx-auto lg:mx-0">
-                  A passionate software engineer specializing in cloud architecture and DevOps
+                <p className="text-lg sm:text-xl text-[#03045e] dark:text-[#caf0f8] mb-8 max-w-2xl mx-auto lg:mx-0">
+                  Backend specialist focused on building robust, scalable applications using Java, Spring Boot, and cloud technologies
                 </p>
               </motion.div>
 
@@ -765,10 +765,10 @@ const Home: React.FC = () => {
               <div className="space-y-2">
                 {[
                   { name: 'AWS', icon: <FaAws className="text-[#0077b6]" /> },
+                  { name: 'Azure', icon: <span className="text-[#0077b6]">☁️</span> },
                   { name: 'Docker', icon: <FaDocker className="text-[#0077b6]" /> },
-                  { name: 'GitHub', icon: <FaGithub className="text-[#0077b6]" /> },
-                  { name: 'Jenkins', icon: <span className="text-[#0077b6]">⚙️</span> },
-                  { name: 'Azure', icon: <span className="text-[#0077b6]">☁️</span> }
+                  { name: 'Kubernetes', icon: <span className="text-[#0077b6]">⚓</span> },
+                  { name: 'GitHub Actions', icon: <FaGithub className="text-[#0077b6]" /> }
                 ].map((skill) => (
                   <motion.div
                     key={skill.name}
@@ -801,11 +801,11 @@ const Home: React.FC = () => {
               </div>
               <div className="space-y-2">
                 {[
-                  { name: 'Java', level: '90%' },
-                  { name: 'Spring Boot', level: '85%' },
-                  { name: 'Hibernate', level: '80%' },
-                  { name: 'SQL', level: '85%' },
-                  { name: 'REST APIs', level: '90%' }
+                  { name: 'Java', level: '95%' },
+                  { name: 'Spring Boot', level: '90%' },
+                  { name: 'Hibernate', level: '85%' },
+                  { name: 'SQL', level: '90%' },
+                  { name: 'OAuth2.0/JWT', level: '85%' }
                 ].map((skill) => (
                   <div key={skill.name} className="space-y-1">
                     <div className="flex justify-between text-sm">
@@ -862,7 +862,7 @@ const Home: React.FC = () => {
               </div>
             </motion.div>
 
-            {/* Development Environment */}
+            {/* Architecture & Design */}
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -872,18 +872,18 @@ const Home: React.FC = () => {
             >
               <div className="flex items-center gap-2 mb-4">
                 <div className="w-8 h-8 rounded-full bg-gradient-to-br from-[#0077b6] to-[#90e0ef] flex items-center justify-center shadow-md">
-                  <span className="text-white text-lg">💻</span>
+                  <span className="text-white text-lg">🏗️</span>
                 </div>
                 <h3 className="text-sm font-semibold text-[#03045e]">
-                  Environment
+                  Architecture
                 </h3>
               </div>
               <div className="space-y-2">
                 {[
-                  { name: 'Linux', icon: '🐧' },
-                  { name: 'Git', icon: '📦' },
-                  { name: 'IntelliJ', icon: '🛠️' },
-                  { name: 'Eclipse', icon: '🌙' }
+                  { name: 'Microservices', icon: '🔧' },
+                  { name: 'Event-Driven', icon: '⚡' },
+                  { name: 'RESTful APIs', icon: '🌐' },
+                  { name: 'System Design', icon: '📐' }
                 ].map((skill) => (
                   <motion.div
                     key={skill.name}
@@ -898,7 +898,7 @@ const Home: React.FC = () => {
               </div>
             </motion.div>
 
-            {/* Build & Automation Tools */}
+            {/* Tools & Testing */}
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -908,17 +908,18 @@ const Home: React.FC = () => {
             >
               <div className="flex items-center gap-2 mb-4">
                 <div className="w-8 h-8 rounded-full bg-gradient-to-br from-[#0077b6] to-[#90e0ef] flex items-center justify-center shadow-md">
-                  <span className="text-white text-lg">⚙️</span>
+                  <span className="text-white text-lg">🛠️</span>
                 </div>
                 <h3 className="text-sm font-semibold text-[#03045e]">
-                  Tools
+                  Tools & Testing
                 </h3>
               </div>
               <div className="space-y-2">
                 {[
-                  { name: 'Maven', icon: '📦' },
                   { name: 'Postman', icon: '📬' },
-                  { name: 'Swagger', icon: '📝' }
+                  { name: 'Swagger', icon: '📝' },
+                  { name: 'JUnit', icon: '🧪' },
+                  { name: 'Linux', icon: '🐧' }
                 ].map((skill) => (
                   <motion.div
                     key={skill.name}
@@ -954,7 +955,7 @@ const Home: React.FC = () => {
           </motion.div>
 
           <div className="max-w-4xl mx-auto">
-            {/* Senior Software Developer */}
+            {/* BlackNGreen - Senior Software Engineer */}
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -966,33 +967,28 @@ const Home: React.FC = () => {
               <div className="bg-[#90e0ef] rounded-xl shadow-lg p-4 hover:shadow-xl transition-shadow">
                 <div className="flex flex-wrap items-center gap-3 mb-2">
                   <span className="px-2 py-0.5 text-xs font-medium bg-[#caf0f8] text-[#0077b6] rounded-full">
-                    2023 - Present
+                    Jan 2025 - Present
                   </span>
                   <h3 className="text-lg font-semibold text-[#03045e]">
-                    Senior Software Developer
+                    Senior Software Engineer
                   </h3>
+                  <span className="text-sm text-[#03045e]">BlackNGreen</span>
                 </div>
-                <p className="text-sm text-[#03045e] mb-2">
-                  Leading development of cloud-native applications and mentoring junior developers
-                </p>
-                <div className="space-y-1">
-                  <p className="text-xs text-[#03045e]">
-                    • Led development of cloud-native applications using AWS services
+                <div className="space-y-2">
+                  <p className="text-sm text-[#03045e]">
+                    • Architected and developed event-driven microservices for AI assistant systems using Spring Boot and Kafka
                   </p>
-                  <p className="text-xs text-[#03045e]">
-                    • Implemented CI/CD pipelines using GitHub Actions and AWS CodePipeline
+                  <p className="text-sm text-[#03045e]">
+                    • Built enterprise-grade authentication systems with OAuth2.0 and JWT for enhanced security
                   </p>
-                  <p className="text-xs text-[#03045e]">
-                    • Mentored junior developers and conducted code reviews
-                  </p>
-                  <p className="text-xs text-[#03045e]">
-                    • Optimized application performance and reduced cloud costs by 30%
+                  <p className="text-sm text-[#03045e]">
+                    • Implemented containerization using Docker and Kubernetes for streamlined deployments
                   </p>
                 </div>
               </div>
             </motion.div>
 
-            {/* Software Developer */}
+            {/* TCS - Software Engineer */}
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -1004,33 +1000,61 @@ const Home: React.FC = () => {
               <div className="bg-[#90e0ef] rounded-xl shadow-lg p-4 hover:shadow-xl transition-shadow">
                 <div className="flex flex-wrap items-center gap-3 mb-2">
                   <span className="px-2 py-0.5 text-xs font-medium bg-[#caf0f8] text-[#0077b6] rounded-full">
-                    2022 - 2023
+                    Nov 2022 - Jan 2025
                   </span>
                   <h3 className="text-lg font-semibold text-[#03045e]">
-                    Software Developer
+                    Software Engineer
                   </h3>
+                  <span className="text-sm text-[#03045e]">Tata Consultancy Services</span>
                 </div>
-                <p className="text-sm text-[#03045e] mb-2">
-                  Developed and maintained microservices architecture and containerized applications
-                </p>
-                <div className="space-y-1">
-                  <p className="text-xs text-[#03045e]">
-                    • Developed and maintained microservices using Node.js and Express
+                <div className="space-y-2">
+                  <p className="text-sm text-[#03045e]">
+                    • Developed and optimized Java backend applications, achieving 30% performance improvement
                   </p>
-                  <p className="text-xs text-[#03045e]">
-                    • Implemented containerization using Docker and Kubernetes
+                  <p className="text-sm text-[#03045e]">
+                    • Implemented comprehensive API documentation using Swagger and Postman
                   </p>
-                  <p className="text-xs text-[#03045e]">
-                    • Collaborated with cross-functional teams to deliver features
-                  </p>
-                  <p className="text-xs text-[#03045e]">
-                    • Improved application reliability through automated testing
+                  <p className="text-sm text-[#03045e]">
+                    • Reduced resource consumption by 25% through code optimization
                   </p>
                 </div>
               </div>
             </motion.div>
 
-            {/* Junior Software Developer */}
+            {/* TCS - Associate Software Engineer */}
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.5, delay: 0.2 }}
+              className="relative pl-8 pb-4 border-l-2 border-[#0077b6]"
+            >
+              <div className="absolute -left-3 top-0 w-5 h-5 rounded-full bg-[#0077b6]"></div>
+              <div className="bg-[#90e0ef] rounded-xl shadow-lg p-4 hover:shadow-xl transition-shadow">
+                <div className="flex flex-wrap items-center gap-3 mb-2">
+                  <span className="px-2 py-0.5 text-xs font-medium bg-[#caf0f8] text-[#0077b6] rounded-full">
+                    Nov 2021 - Oct 2022
+                  </span>
+                  <h3 className="text-lg font-semibold text-[#03045e]">
+                    Associate Software Engineer
+                  </h3>
+                  <span className="text-sm text-[#03045e]">Tata Consultancy Services</span>
+                </div>
+                <div className="space-y-2">
+                  <p className="text-sm text-[#03045e]">
+                    • Contributed to Java backend development and maintenance of enterprise applications
+                  </p>
+                  <p className="text-sm text-[#03045e]">
+                    • Participated in code reviews and implemented best practices for code quality
+                  </p>
+                  <p className="text-sm text-[#03045e]">
+                    • Collaborated with senior developers to implement new features and bug fixes
+                  </p>
+                </div>
+              </div>
+            </motion.div>
+
+            {/* Cadence - Software Engineer Intern */}
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -1042,97 +1066,49 @@ const Home: React.FC = () => {
               <div className="bg-[#90e0ef] rounded-xl shadow-lg p-4 hover:shadow-xl transition-shadow">
                 <div className="flex flex-wrap items-center gap-3 mb-2">
                   <span className="px-2 py-0.5 text-xs font-medium bg-[#caf0f8] text-[#0077b6] rounded-full">
-                    2021 - 2022
+                    Aug 2021 - Nov 2021
                   </span>
                   <h3 className="text-lg font-semibold text-[#03045e]">
-                    Junior Software Developer
+                    Software Engineer Intern
                   </h3>
+                  <span className="text-sm text-[#03045e]">Cadence</span>
                 </div>
-                <p className="text-sm text-[#03045e] mb-2">
-                  Built and maintained web applications and RESTful APIs
-                </p>
-                <div className="space-y-1">
-                  <p className="text-xs text-[#03045e]">
-                    • Built and maintained RESTful APIs using Python and Flask
+                <div className="space-y-2">
+                  <p className="text-sm text-[#03045e]">
+                    • Managed version control and documentation using project management tools
                   </p>
-                  <p className="text-xs text-[#03045e]">
-                    • Implemented frontend features using React and TypeScript
-                  </p>
-                  <p className="text-xs text-[#03045e]">
-                    • Participated in agile development processes
-                  </p>
-                  <p className="text-xs text-[#03045e]">
-                    • Fixed bugs and improved application performance
+                  <p className="text-sm text-[#03045e]">
+                    • Collaborated with cross-functional teams on technical documentation
                   </p>
                 </div>
               </div>
             </motion.div>
 
-            {/* Post-CLD Internship */}
+            {/* Suncity Real Estate - Software Engineer Intern */}
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: 0.4 }}
-              className="relative pl-8 pb-4 border-l-2 border-[#0077b6]"
-            >
-              <div className="absolute -left-3 top-0 w-4 h-4 rounded-full bg-[#0077b6]"></div>
-              <div className="bg-[#90e0ef] rounded-xl shadow-lg p-3 hover:shadow-xl transition-shadow">
-                <div className="flex flex-wrap items-center gap-2 mb-1">
-                  <span className="px-2 py-0.5 text-xs font-medium bg-[#caf0f8] text-[#0077b6] rounded-full">
-                    3 months (2021)
-                  </span>
-                  <h3 className="text-base font-semibold text-[#03045e]">
-                    Software Engineering Intern
-                  </h3>
-                </div>
-                <p className="text-xs text-[#03045e] mb-1">
-                  Assisted in developing cloud-based solutions and implementing CI/CD pipelines
-                </p>
-                <div className="space-y-0.5">
-                  <p className="text-xs text-[#03045e]">
-                    • Assisted in developing cloud-based solutions using AWS
-                  </p>
-                  <p className="text-xs text-[#03045e]">
-                    • Worked on implementing CI/CD pipelines
-                  </p>
-                  <p className="text-xs text-[#03045e]">
-                    • Participated in code reviews and team meetings
-                  </p>
-                </div>
-              </div>
-            </motion.div>
-
-            {/* College Internship */}
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.5, delay: 0.5 }}
               className="relative pl-8 border-l-2 border-[#0077b6]"
             >
-              <div className="absolute -left-3 top-0 w-4 h-4 rounded-full bg-[#0077b6]"></div>
-              <div className="bg-[#90e0ef] rounded-xl shadow-lg p-3 hover:shadow-xl transition-shadow">
-                <div className="flex flex-wrap items-center gap-2 mb-1">
+              <div className="absolute -left-3 top-0 w-5 h-5 rounded-full bg-[#0077b6]"></div>
+              <div className="bg-[#90e0ef] rounded-xl shadow-lg p-4 hover:shadow-xl transition-shadow">
+                <div className="flex flex-wrap items-center gap-3 mb-2">
                   <span className="px-2 py-0.5 text-xs font-medium bg-[#caf0f8] text-[#0077b6] rounded-full">
-                    2 months (2020)
+                    May 2020 - July 2020
                   </span>
-                  <h3 className="text-base font-semibold text-[#03045e]">
-                    Software Development Intern
+                  <h3 className="text-lg font-semibold text-[#03045e]">
+                    Software Engineer Intern
                   </h3>
+                  <span className="text-sm text-[#03045e]">Suncity Real Estate</span>
                 </div>
-                <p className="text-xs text-[#03045e] mb-1">
-                  Developed web applications and learned software development best practices
-                </p>
-                <div className="space-y-0.5">
-                  <p className="text-xs text-[#03045e]">
-                    • Developed web applications using HTML, CSS, and JavaScript
+                <div className="space-y-2">
+                  <p className="text-sm text-[#03045e]">
+                    • Developed custom software solutions under senior engineer guidance
                   </p>
-                  <p className="text-xs text-[#03045e]">
-                    • Assisted in database design and implementation
-                  </p>
-                  <p className="text-xs text-[#03045e]">
-                    • Learned and applied software development best practices
+                  <p className="text-sm text-[#03045e]">
+                    • Implemented bug fixes and performance improvements
                   </p>
                 </div>
               </div>
@@ -1170,18 +1146,12 @@ const Home: React.FC = () => {
                     Bachelor of Technology
                   </h3>
                 </div>
-                <p className="text-sm text-[#03045e] mb-2">
-                  Computer Science and Engineering
-                </p>
                 <div className="space-y-1">
-                  <p className="text-xs text-[#03045e]">
+                  <p className="text-sm text-[#03045e]">
+                    • Awarded Highest Academic Performance for securing second rank in college
+                  </p>
+                  <p className="text-sm text-[#03045e]">
                     • Graduated with Distinction (CGPA: 8.6)
-                  </p>
-                  <p className="text-xs text-[#03045e]">
-                    • University Name
-                  </p>
-                  <p className="text-xs text-[#03045e]">
-                    • Relevant Coursework: Data Structures, Algorithms, Database Management, Operating Systems, Computer Networks
                   </p>
                 </div>
               </div>
