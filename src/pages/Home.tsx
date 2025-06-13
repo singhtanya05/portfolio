@@ -4,6 +4,16 @@ import { FaGithub, FaLinkedin, FaEnvelope, FaAws, FaGoogle, FaDocker, FaTimes, F
 import { TypeAnimation } from 'react-type-animation';
 import photo from '../assets/photo.jpg';
 import oreillyLogo from '../assets/oreilly-logo.svg';
+import az900Cert from '../assets/certificates/az900Certificate.jpg';
+import az104Cert from '../assets/certificates/az104Certificate.jpg';
+import az400Cert from '../assets/certificates/az400Certificate.jpg';
+import az900Logo from '../assets/logo/az900.svg';
+import az104Logo from '../assets/logo/az104.svg';
+import az400Logo from '../assets/logo/az400.svg';
+import awsCert from '../assets/certificates/aws-certified-cloud-practitioner.png';
+import awsLogo from '../assets/logo/aws-certified-cloud-practitioner.png';
+import gcpCert from '../assets/certificates/gcpCertificate.jpg';
+import gcpLogo from '../assets/logo/gcpLogo.png';
 
 const Home: React.FC = () => {
   const { scrollYProgress } = useScroll();
@@ -15,11 +25,15 @@ const Home: React.FC = () => {
     provider: string;
   } | null>(null);
 
+  const [isCertModalOpen, setIsCertModalOpen] = useState(false);
+
   const handleCertClick = (cert: { name: string; image: string; provider: string }) => {
     setSelectedCert(cert);
+    setIsCertModalOpen(true);
   };
 
-  const closeModal = () => {
+  const handleCloseCertModal = () => {
+    setIsCertModalOpen(false);
     setSelectedCert(null);
   };
 
@@ -27,7 +41,7 @@ const Home: React.FC = () => {
   useEffect(() => {
     const handleEsc = (event: KeyboardEvent) => {
       if (event.key === 'Escape') {
-        closeModal();
+        handleCloseCertModal();
       }
     };
     window.addEventListener('keydown', handleEsc);
@@ -308,7 +322,7 @@ const Home: React.FC = () => {
                 className="flex justify-center lg:justify-start gap-6"
               >
                 <motion.a
-                  href="https://github.com/yourusername"
+                  href="https://github.com/singhtanya05"
                   target="_blank"
                   rel="noopener noreferrer"
                   whileHover={{ scale: 1.1, y: -5 }}
@@ -318,7 +332,7 @@ const Home: React.FC = () => {
                   <FaGithub />
                 </motion.a>
                 <motion.a
-                  href="https://linkedin.com/in/yourusername"
+                  href="https://www.linkedin.com/in/tanyatanyaa/"
                   target="_blank"
                   rel="noopener noreferrer"
                   whileHover={{ scale: 1.1, y: -5 }}
@@ -328,7 +342,7 @@ const Home: React.FC = () => {
                   <FaLinkedin />
                 </motion.a>
                 <motion.a
-                  href="mailto:your.email@example.com"
+                  href="mailto:tanyakv1511@gmail.com"
                   whileHover={{ scale: 1.1, y: -5 }}
                   whileTap={{ scale: 0.95 }}
                   className="text-2xl text-[#03045e] dark:text-[#caf0f8] hover:text-[#0077b6] dark:hover:text-[#90e0ef] transition-colors"
@@ -418,7 +432,7 @@ const Home: React.FC = () => {
                             {/* Social links with creative design */}
                             <div className="flex justify-center gap-6">
                               <motion.a
-                                href="https://github.com/yourusername"
+                                href="https://github.com/singhtanya05"
                                 target="_blank"
                                 rel="noopener noreferrer"
                                 whileHover={{ scale: 1.2, y: -5, rotate: 5 }}
@@ -429,7 +443,7 @@ const Home: React.FC = () => {
                                 <FaGithub className="w-6 h-6 text-white relative z-10" />
                               </motion.a>
                               <motion.a
-                                href="https://linkedin.com/in/yourusername"
+                                href="https://www.linkedin.com/in/tanyatanyaa/"
                                 target="_blank"
                                 rel="noopener noreferrer"
                                 whileHover={{ scale: 1.2, y: -5, rotate: -5 }}
@@ -440,7 +454,7 @@ const Home: React.FC = () => {
                                 <FaLinkedin className="w-6 h-6 text-white relative z-10" />
                               </motion.a>
                               <motion.a
-                                href="mailto:your.email@example.com"
+                                href="mailto:tanyakv1511@gmail.com"
                                 whileHover={{ scale: 1.2, y: -5, rotate: 5 }}
                                 whileTap={{ scale: 0.9 }}
                                 className="relative group"
@@ -576,7 +590,7 @@ const Home: React.FC = () => {
                   </div>
                   <div className="flex justify-between items-center mt-auto">
                     <a
-                      href="https://github.com/yourusername/project"
+                      href="https://github.com/singhtanya05/project"
                       target="_blank"
                       rel="noopener noreferrer"
                       className="text-sm sm:text-base text-[#0077b6] hover:text-[#03045e] font-medium flex items-center gap-1 sm:gap-2"
@@ -587,12 +601,12 @@ const Home: React.FC = () => {
                       </svg>
                     </a>
                     <a
-                      href="https://github.com/yourusername/project"
+                      href="https://github.com/singhtanya05/project"
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="text-[#03045e] hover:text-[#0077b6]"
+                      className="text-[#0077b6] hover:text-[#03045e] transition-colors"
                     >
-                      <FaGithub className="text-lg sm:text-xl" />
+                      <FaGithub className="text-2xl" />
                     </a>
                   </div>
                 </div>
@@ -628,7 +642,7 @@ const Home: React.FC = () => {
                   </div>
                   <div className="flex justify-between items-center mt-auto">
                     <a
-                      href="https://github.com/yourusername/project"
+                      href="https://github.com/singhtanya05/project"
                       target="_blank"
                       rel="noopener noreferrer"
                       className="text-sm sm:text-base text-[#0077b6] hover:text-[#03045e] font-medium flex items-center gap-1 sm:gap-2"
@@ -639,12 +653,12 @@ const Home: React.FC = () => {
                       </svg>
                     </a>
                     <a
-                      href="https://github.com/yourusername/project"
+                      href="https://github.com/singhtanya05/project"
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="text-[#03045e] hover:text-[#0077b6]"
+                      className="text-[#0077b6] hover:text-[#03045e] transition-colors"
                     >
-                      <FaGithub className="text-lg sm:text-xl" />
+                      <FaGithub className="text-2xl" />
                     </a>
                   </div>
                 </div>
@@ -680,7 +694,7 @@ const Home: React.FC = () => {
                   </div>
                   <div className="flex justify-between items-center mt-auto">
                     <a
-                      href="https://github.com/yourusername/project"
+                      href="https://github.com/singhtanya05/project"
                       target="_blank"
                       rel="noopener noreferrer"
                       className="text-sm sm:text-base text-[#0077b6] hover:text-[#03045e] font-medium flex items-center gap-1 sm:gap-2"
@@ -691,12 +705,12 @@ const Home: React.FC = () => {
                       </svg>
                     </a>
                     <a
-                      href="https://github.com/yourusername/project"
+                      href="https://github.com/singhtanya05/project"
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="text-[#03045e] hover:text-[#0077b6]"
+                      className="text-[#0077b6] hover:text-[#03045e] transition-colors"
                     >
-                      <FaGithub className="text-lg sm:text-xl" />
+                      <FaGithub className="text-2xl" />
                     </a>
                   </div>
                 </div>
@@ -712,7 +726,7 @@ const Home: React.FC = () => {
             className="text-center mt-12"
           >
             <a
-              href="https://github.com/yourusername"
+              href="https://github.com/singhtanya05"
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center gap-2 px-6 py-3 bg-gradient-to-r from-[#0077b6] to-[#90e0ef] text-white rounded-full hover:from-[#03045e] hover:to-[#0077b6] transition-all duration-300 shadow-lg hover:shadow-xl"
@@ -1212,22 +1226,25 @@ const Home: React.FC = () => {
                     <div className="space-y-3">
                       {[
                         { 
-                          name: 'Solutions Architect Expert', 
+                          name: 'Azure Fundamentals', 
                           date: '2024',
-                          code: 'AZ-305',
-                          image: 'https://placehold.co/800x600/0077b6/ffffff?text=Azure+Solutions+Architect+Expert'
+                          code: 'AZ-900',
+                          image: az900Cert,
+                          logo: az900Logo
                         },
                         { 
-                          name: 'DevOps Engineer Expert', 
-                          date: '2023',
-                          code: 'AZ-400',
-                          image: 'https://placehold.co/800x600/0077b6/ffffff?text=Azure+DevOps+Engineer+Expert'
-                        },
-                        { 
-                          name: 'Administrator Associate', 
-                          date: '2023',
+                          name: 'Azure Administrator Associate', 
+                          date: '2024',
                           code: 'AZ-104',
-                          image: 'https://placehold.co/800x600/0077b6/ffffff?text=Azure+Administrator+Associate'
+                          image: az104Cert,
+                          logo: az104Logo
+                        },
+                        { 
+                          name: 'Azure DevOps Engineer Expert', 
+                          date: '2024',
+                          code: 'AZ-400',
+                          image: az400Cert,
+                          logo: az400Logo
                         }
                       ].map((cert) => (
                         <motion.div
@@ -1238,7 +1255,7 @@ const Home: React.FC = () => {
                           className="bg-[#caf0f8]/50 rounded-xl p-3 cursor-pointer hover:bg-[#caf0f8] transition-colors"
                         >
                           <div className="flex items-start gap-3">
-                            <img src="https://learn.microsoft.com/en-us/media/learn/certification/badges/microsoft-certified-expert-badge.svg" alt={cert.name} className="w-8 h-8" />
+                            <img src={cert.logo} alt={cert.name} className="w-8 h-8" />
                             <div className="flex-1">
                               <h4 className="text-sm font-medium text-[#03045e]">{cert.name}</h4>
                               <p className="text-xs text-[#0077b6]">{cert.code}</p>
@@ -1252,11 +1269,11 @@ const Home: React.FC = () => {
             </motion.div>
 
                 {/* AWS */}
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.5, delay: 0.2 }}
+                <motion.div
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ duration: 0.5, delay: 0.2 }}
                   className="relative group"
                 >
                   <div className="w-24 h-24 mx-auto bg-white/80 backdrop-blur-sm rounded-2xl shadow-xl p-4 flex items-center justify-center hover:shadow-2xl transition-all duration-300">
@@ -1266,19 +1283,19 @@ const Home: React.FC = () => {
                     <div className="flex items-center gap-3 mb-4">
                       <FaAws className="text-[#0077b6] text-2xl" />
                       <h3 className="text-lg font-semibold text-[#03045e]">Amazon Web Services</h3>
-              </div>
+                    </div>
                     <motion.div
                       whileHover={{ scale: 1.02 }}
                       whileTap={{ scale: 0.98 }}
                       onClick={() => handleCertClick({ 
                         name: 'AWS Certified Cloud Practitioner', 
-                        image: 'https://placehold.co/800x600/0077b6/ffffff?text=AWS+Cloud+Practitioner',
+                        image: awsCert,
                         provider: 'AWS'
                       })}
                       className="bg-[#caf0f8]/50 rounded-xl p-3 cursor-pointer hover:bg-[#caf0f8] transition-colors"
                     >
                       <div className="flex items-start gap-3">
-                        <img src="https://d1.awsstatic.com/training-and-certification/certification-badges/AWS-Certified-Cloud-Practitioner_badge.634f8a21af2e0e956ed8905a72366146ba22b74c.png" alt="AWS Practitioner" className="w-8 h-8" />
+                        <img src={awsLogo} alt="AWS Practitioner" className="w-8 h-8" />
                         <div className="flex-1">
                           <h4 className="text-sm font-medium text-[#03045e]">AWS Certified Cloud Practitioner</h4>
                           <p className="text-xs text-[#0077b6]">CLF-C02</p>
@@ -1287,14 +1304,14 @@ const Home: React.FC = () => {
                       </div>
                     </motion.div>
                   </div>
-            </motion.div>
+                </motion.div>
 
                 {/* GCP */}
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.5, delay: 0.3 }}
+                <motion.div
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ duration: 0.5, delay: 0.3 }}
                   className="relative group"
                 >
                   <div className="w-24 h-24 mx-auto bg-white/80 backdrop-blur-sm rounded-2xl shadow-xl p-4 flex items-center justify-center hover:shadow-2xl transition-all duration-300">
@@ -1310,13 +1327,13 @@ const Home: React.FC = () => {
                       whileTap={{ scale: 0.98 }}
                       onClick={() => handleCertClick({ 
                         name: 'Google Cloud Digital Leader', 
-                        image: 'https://placehold.co/800x600/0077b6/ffffff?text=GCP+Digital+Leader',
+                        image: gcpCert,
                         provider: 'GCP'
                       })}
                       className="bg-[#caf0f8]/50 rounded-xl p-3 cursor-pointer hover:bg-[#caf0f8] transition-colors"
                     >
                       <div className="flex items-start gap-3">
-                        <img src="https://cloud.google.com/_static/cloud/images/social-icon-google-cloud-1200-630.png" alt="GCP Digital Leader" className="w-8 h-8" />
+                        <img src={gcpLogo} alt="GCP Digital Leader" className="w-8 h-8" />
                         <div className="flex-1">
                           <h4 className="text-sm font-medium text-[#03045e]">Google Cloud Digital Leader</h4>
                           <p className="text-xs text-[#0077b6]">GCP-DL</p>
@@ -1324,57 +1341,6 @@ const Home: React.FC = () => {
                         </div>
                       </div>
                     </motion.div>
-                  </div>
-                </motion.div>
-
-                {/* GitHub */}
-                <motion.div
-                  initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  viewport={{ once: true }}
-                  transition={{ duration: 0.5, delay: 0.4 }}
-                  className="relative group"
-                >
-                  <div className="w-24 h-24 mx-auto bg-white/80 backdrop-blur-sm rounded-2xl shadow-xl p-4 flex items-center justify-center hover:shadow-2xl transition-all duration-300">
-                    <FaGithub className="text-[#0077b6] text-5xl" />
-                  </div>
-                  <div className="absolute top-full left-1/2 -translate-x-1/2 mt-4 w-80 bg-white/90 backdrop-blur-sm rounded-2xl shadow-2xl p-6 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-10">
-                    <div className="flex items-center gap-3 mb-4">
-                      <FaGithub className="text-[#0077b6] text-2xl" />
-                      <h3 className="text-lg font-semibold text-[#03045e]">GitHub</h3>
-                    </div>
-                    <div className="space-y-3">
-                      {[
-                        { 
-                          name: 'GitHub Actions', 
-                          date: '2024',
-                          image: 'https://placehold.co/800x600/0077b6/ffffff?text=GitHub+Actions',
-                          logo: 'https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png'
-                        },
-                        { 
-                          name: 'GitHub Advanced Security', 
-                          date: '2023',
-                          image: 'https://placehold.co/800x600/0077b6/ffffff?text=GitHub+Advanced+Security',
-                          logo: 'https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png'
-                        }
-                      ].map((cert) => (
-                        <motion.div
-                          key={cert.name}
-                          whileHover={{ scale: 1.02 }}
-                          whileTap={{ scale: 0.98 }}
-                          onClick={() => handleCertClick({ name: cert.name, image: cert.image, provider: 'GitHub' })}
-                          className="bg-[#caf0f8]/50 rounded-xl p-3 cursor-pointer hover:bg-[#caf0f8] transition-colors"
-                        >
-                          <div className="flex items-start gap-3">
-                            <img src={cert.logo} alt={cert.name} className="w-8 h-8" />
-                            <div className="flex-1">
-                              <h4 className="text-sm font-medium text-[#03045e]">{cert.name}</h4>
-                              <p className="text-xs text-[#0077b6]">{cert.date}</p>
-                            </div>
-                          </div>
-                        </motion.div>
-                      ))}
-                    </div>
                   </div>
                 </motion.div>
 
@@ -1397,21 +1363,27 @@ const Home: React.FC = () => {
                     <div className="space-y-3">
                       {[
                         { 
-                          name: 'Kubernetes Administration', 
+                          name: 'Clean Code', 
                           date: '2024',
-                          image: 'https://placehold.co/800x600/0077b6/ffffff?text=O%27Reilly+Kubernetes',
+                          image: '/certificates/clean-code.pdf',
                           logo: oreillyLogo
                         },
                         { 
-                          name: 'DevOps Engineering', 
-                          date: '2023',
-                          image: 'https://placehold.co/800x600/0077b6/ffffff?text=O%27Reilly+DevOps',
+                          name: 'Java Lambdas and Streams', 
+                          date: '2024',
+                          image: '/certificates/java-lambdas-and-streams.pdf',
                           logo: oreillyLogo
                         },
                         { 
-                          name: 'Cloud Security', 
-                          date: '2023',
-                          image: 'https://placehold.co/800x600/0077b6/ffffff?text=O%27Reilly+Cloud+Security',
+                          name: 'Microservices Data Decomposition', 
+                          date: '2024',
+                          image: '/certificates/microservices-data-decomp.pdf',
+                          logo: oreillyLogo
+                        },
+                        { 
+                          name: 'Microservices Caching', 
+                          date: '2024',
+                          image: '/certificates/microservices-caching.pdf',
                           logo: oreillyLogo
                         }
                       ].map((cert) => (
@@ -1424,6 +1396,57 @@ const Home: React.FC = () => {
                         >
                           <div className="flex items-start gap-3">
                             <img src={oreillyLogo} alt={cert.name} className="w-8 h-8" />
+                            <div className="flex-1">
+                              <h4 className="text-sm font-medium text-[#03045e]">{cert.name}</h4>
+                              <p className="text-xs text-[#0077b6]">{cert.date}</p>
+                            </div>
+                          </div>
+                        </motion.div>
+                      ))}
+                    </div>
+                  </div>
+                </motion.div>
+
+                {/* GitHub */}
+                <motion.div
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ duration: 0.5, delay: 0.4 }}
+                  className="relative group"
+                >
+                  <div className="w-24 h-24 mx-auto bg-white/80 backdrop-blur-sm rounded-2xl shadow-xl p-4 flex items-center justify-center hover:shadow-2xl transition-all duration-300">
+                    <FaGithub className="text-[#0077b6] text-5xl" />
+                  </div>
+                  <div className="absolute top-full left-1/2 -translate-x-1/2 mt-4 w-80 bg-white/90 backdrop-blur-sm rounded-2xl shadow-2xl p-6 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-10">
+                    <div className="flex items-center gap-3 mb-4">
+                      <FaGithub className="text-[#0077b6] text-2xl" />
+                      <h3 className="text-lg font-semibold text-[#03045e]">GitHub</h3>
+                    </div>
+                    <div className="space-y-3">
+                      {[
+                        { 
+                          name: 'GitHub Foundations', 
+                          date: '2024',
+                          image: '/certificates/github-foundations.pdf',
+                          logo: 'https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png'
+                        },
+                        { 
+                          name: 'GitHub Actions', 
+                          date: '2024',
+                          image: '/certificates/github-actions.pdf',
+                          logo: 'https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png'
+                        }
+                      ].map((cert) => (
+                        <motion.div
+                          key={cert.name}
+                          whileHover={{ scale: 1.02 }}
+                          whileTap={{ scale: 0.98 }}
+                          onClick={() => handleCertClick({ name: cert.name, image: cert.image, provider: 'GitHub' })}
+                          className="bg-[#caf0f8]/50 rounded-xl p-3 cursor-pointer hover:bg-[#caf0f8] transition-colors"
+                        >
+                          <div className="flex items-start gap-3">
+                            <img src={cert.logo} alt={cert.name} className="w-8 h-8" />
                             <div className="flex-1">
                               <h4 className="text-sm font-medium text-[#03045e]">{cert.name}</h4>
                               <p className="text-xs text-[#0077b6]">{cert.date}</p>
@@ -1716,10 +1739,10 @@ const Home: React.FC = () => {
                     Email
                   </h3>
                   <a
-                    href="mailto:your.email@example.com"
+                    href="mailto:tanyakv1511@gmail.com"
                     className="text-[#03045e] dark:text-[#caf0f8] hover:text-[#0077b6] dark:hover:text-[#90e0ef] focus:outline-none"
                   >
-                    your.email@example.com
+                    tanyakv1511@gmail.com
                   </a>
                 </div>
               </div>
@@ -1733,12 +1756,12 @@ const Home: React.FC = () => {
                     LinkedIn
                   </h3>
                   <a
-                    href="https://linkedin.com/in/yourusername"
+                    href="https://www.linkedin.com/in/tanyatanyaa/"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="text-[#03045e] dark:text-[#caf0f8] hover:text-[#0077b6] dark:hover:text-[#90e0ef] focus:outline-none"
                   >
-                    linkedin.com/in/yourusername
+                    linkedin.com/in/tanyatanyaa
                   </a>
                 </div>
               </div>
@@ -1752,12 +1775,12 @@ const Home: React.FC = () => {
                     GitHub
                   </h3>
                   <a
-                    href="https://github.com/yourusername"
+                    href="https://github.com/singhtanya05"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="text-[#03045e] dark:text-[#caf0f8] hover:text-[#0077b6] dark:hover:text-[#90e0ef] focus:outline-none"
                   >
-                    github.com/yourusername
+                    github.com/singhtanya05
                   </a>
                 </div>
               </div>
@@ -1799,7 +1822,7 @@ const Home: React.FC = () => {
                     type="email"
                     id="email"
                     className="w-full px-4 py-2 rounded-lg border border-[#0077b6] bg-[#caf0f8] text-[#03045e] focus:outline-none focus:ring-2 focus:ring-[#0077b6]"
-                    placeholder="your.email@example.com"
+                    placeholder="tanyakv1511@gmail.com"
                   />
                 </div>
 
@@ -1853,34 +1876,41 @@ const Home: React.FC = () => {
               animate={{ opacity: 1 }}
               exit={{ opacity: 0 }}
               className="fixed inset-0 bg-black/50 backdrop-blur-sm z-50 flex items-center justify-center p-4"
-              onClick={closeModal}
+              onClick={handleCloseCertModal}
             >
               <motion.div
                 initial={{ scale: 0.9, opacity: 0 }}
                 animate={{ scale: 1, opacity: 1 }}
                 exit={{ scale: 0.9, opacity: 0 }}
-                className="bg-white/95 dark:bg-[#03045e]/95 backdrop-blur-sm rounded-2xl shadow-2xl max-w-4xl w-full max-h-[90vh] overflow-hidden"
-                onClick={e => e.stopPropagation()}
+                className="bg-white rounded-2xl shadow-2xl max-w-4xl w-full max-h-[90vh] overflow-hidden"
+                onClick={(e) => e.stopPropagation()}
               >
-                <div className="relative">
-                  <button
-                    onClick={closeModal}
-                    className="absolute top-3 right-3 text-gray-500 hover:text-gray-700 z-10 bg-white/80 rounded-full p-1 hover:bg-white transition-colors"
-                  >
-                    <FaTimes className="w-5 h-5" />
-                  </button>
-                  <div className="p-4">
-                    <h3 className="text-xl font-semibold text-[#03045e] mb-3 text-center">
-                      {selectedCert.name}
-                    </h3>
-                    <div className="bg-gray-50 rounded-xl overflow-hidden">
-                      <img
-                        src={selectedCert.image}
-                        alt={selectedCert.name}
-                        className="w-full h-full object-contain max-h-[70vh]"
-                      />
-                    </div>
+                <div className="p-6 border-b border-gray-200">
+                  <div className="flex items-center justify-between">
+                    <h3 className="text-xl font-semibold text-[#03045e]">{selectedCert.name}</h3>
+                    <button
+                      onClick={handleCloseCertModal}
+                      className="text-gray-500 hover:text-gray-700 transition-colors"
+                    >
+                      <FaTimes className="text-2xl" />
+                    </button>
                   </div>
+                  <p className="text-[#0077b6] mt-1">{selectedCert.provider}</p>
+                </div>
+                <div className="p-6 overflow-auto max-h-[calc(90vh-8rem)]">
+                  {selectedCert.image.endsWith('.pdf') ? (
+                    <iframe
+                      src={selectedCert.image}
+                      className="w-full h-[70vh] rounded-lg"
+                      title={selectedCert.name}
+                    />
+                  ) : (
+                    <img
+                      src={selectedCert.image}
+                      alt={selectedCert.name}
+                      className="w-full h-auto rounded-lg"
+                    />
+                  )}
                 </div>
               </motion.div>
             </motion.div>

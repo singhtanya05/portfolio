@@ -13,26 +13,26 @@ const Footer: React.FC = () => {
           </div>
           <div className="flex space-x-6">
             <a
-              href="https://github.com/yourusername"
+              href="https://github.com/singhtanya05"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-textSecondary hover:text-secondary transition-colors"
+              className="text-[#0077b6] hover:text-[#03045e] transition-colors"
             >
-              <FaGithub className="w-5 h-5" />
+              <FaGithub className="text-2xl" />
             </a>
             <a
-              href="https://linkedin.com/in/yourusername"
+              href="https://www.linkedin.com/in/tanyatanyaa/"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-textSecondary hover:text-secondary transition-colors"
+              className="text-[#0077b6] hover:text-[#03045e] transition-colors"
             >
-              <FaLinkedin className="w-5 h-5" />
+              <FaLinkedin className="text-2xl" />
             </a>
             <a
-              href="mailto:your.email@example.com"
-              className="text-textSecondary hover:text-secondary transition-colors"
+              href="mailto:tanyakv1511@gmail.com"
+              className="text-[#0077b6] hover:text-[#03045e] transition-colors"
             >
-              <FaEnvelope className="w-5 h-5" />
+              <FaEnvelope className="text-2xl" />
             </a>
           </div>
         </div>

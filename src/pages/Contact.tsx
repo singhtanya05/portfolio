@@ -145,30 +145,30 @@ const Contact: React.FC = () => {
 
                 <div className="space-y-4">
                   <a
-                    href="mailto:your.email@example.com"
-                    className="flex items-center text-textSecondary hover:text-secondary transition-colors"
+                    href="mailto:tanyakv1511@gmail.com"
+                    className="text-[#0077b6] hover:text-[#03045e] transition-colors"
                   >
-                    <FaEnvelope className="w-5 h-5 mr-3" />
-                    your.email@example.com
+                    <FaEnvelope className="text-2xl" />
                   </a>
+                  <span className="text-[#03045e]">tanyakv1511@gmail.com</span>
                   <a
-                    href="https://github.com/yourusername"
+                    href="https://github.com/singhtanya05"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="flex items-center text-textSecondary hover:text-secondary transition-colors"
+                    className="text-[#0077b6] hover:text-[#03045e] transition-colors"
                   >
-                    <FaGithub className="w-5 h-5 mr-3" />
-                    github.com/yourusername
+                    <FaGithub className="text-2xl" />
                   </a>
+                  <span className="text-[#03045e]">github.com/singhtanya05</span>
                   <a
-                    href="https://linkedin.com/in/yourusername"
+                    href="https://www.linkedin.com/in/tanyatanyaa/"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="flex items-center text-textSecondary hover:text-secondary transition-colors"
+                    className="text-[#0077b6] hover:text-[#03045e] transition-colors"
                   >
-                    <FaLinkedin className="w-5 h-5 mr-3" />
-                    linkedin.com/in/yourusername
+                    <FaLinkedin className="text-2xl" />
                   </a>
+                  <span className="text-[#03045e]">linkedin.com/in/tanyatanyaa</span>
                 </div>
 
                 <div className="bg-primary p-6 rounded-lg">

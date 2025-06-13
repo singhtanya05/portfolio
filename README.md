@@ -30,7 +30,6 @@ Check out the live portfolio: [Portfolio Website](https://your-portfolio-url.com
 | ⚡ **Performance** | Optimized for speed and efficiency |
 | 🔍 **SEO Ready** | Built with search engines in mind |
 | 🎭 **Animations** | Smooth transitions and interactions |
-| 📊 **Analytics** | Track visitor engagement |
 | 🔒 **Security** | HTTPS and best security practices |
 
 </div>
@@ -54,7 +53,7 @@ Check out the live portfolio: [Portfolio Website](https://your-portfolio-url.com
 
 ```bash
 # Clone the repository
-git clone https://github.com/yourusername/portfolio.git
+git clone https://github.com/singhtanya05/portfolio.git
 
 # Navigate to project directory
 cd portfolio
