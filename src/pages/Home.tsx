@@ -1818,7 +1818,7 @@ const Home: React.FC = () => {
                     type="email"
                     id="email"
                     className="w-full px-4 py-2 rounded-lg border border-[#0077b6] bg-[#caf0f8] text-[#03045e] focus:outline-none focus:ring-2 focus:ring-[#0077b6]"
-                    placeholder="tanyakv1511@gmail.com"
+                    placeholder="mail@gmail.com"
                   />
                 </div>
 
