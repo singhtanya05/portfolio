@@ -1,0 +1,36 @@
+/* Base styles */
+:root {
+  --primary: #0a192f;
+  --secondary: #64ffda;
+  --tertiary: #112240;
+  --text-primary: #ccd6f6;
+  --text-secondary: #8892b0;
+}
+
+/* Global styles */
+body {
+  margin: 0;
+  font-family: 'Inter', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: var(--primary);
+  color: var(--text-primary);
+}
+
+/* Utility classes */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+/* Transitions */
+.transition-all {
+  transition: all 0.3s ease;
+}
+
+/* Focus styles */
+*:focus {
+  outline: 2px solid var(--secondary);
+  outline-offset: 2px;
+} 
