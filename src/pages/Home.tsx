@@ -3,6 +3,7 @@ import { motion, AnimatePresence, useScroll, useTransform } from 'framer-motion'
 import { FaGithub, FaLinkedin, FaEnvelope, FaAws, FaGoogle, FaDocker, FaTimes, FaFileDownload } from 'react-icons/fa';
 import { TypeAnimation } from 'react-type-animation';
 import photo from '../assets/photo.jpg';
+import oreillyLogo from '../assets/oreilly-logo.svg';
 
 const Home: React.FC = () => {
   const { scrollYProgress } = useScroll();
@@ -1386,11 +1387,11 @@ const Home: React.FC = () => {
                   className="relative group"
                 >
                   <div className="w-24 h-24 mx-auto bg-white/80 backdrop-blur-sm rounded-2xl shadow-xl p-4 flex items-center justify-center hover:shadow-2xl transition-all duration-300">
-                    <img src="https://upload.wikimedia.org/wikipedia/commons/4/4d/O%27Reilly_Media_logo.svg" alt="O'Reilly" className="w-16 h-16" />
+                    <img src={oreillyLogo} alt="O'Reilly" className="w-16 h-16" />
                   </div>
                   <div className="absolute top-full left-1/2 -translate-x-1/2 mt-4 w-80 bg-white/90 backdrop-blur-sm rounded-2xl shadow-2xl p-6 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-10">
                     <div className="flex items-center gap-3 mb-4">
-                      <img src="https://upload.wikimedia.org/wikipedia/commons/4/4d/O%27Reilly_Media_logo.svg" alt="O'Reilly" className="w-8 h-8" />
+                      <img src={oreillyLogo} alt="O'Reilly" className="w-8 h-8" />
                       <h3 className="text-lg font-semibold text-[#03045e]">O'Reilly</h3>
                     </div>
                     <div className="space-y-3">
@@ -1399,19 +1400,19 @@ const Home: React.FC = () => {
                           name: 'Kubernetes Administration', 
                           date: '2024',
                           image: 'https://placehold.co/800x600/0077b6/ffffff?text=O%27Reilly+Kubernetes',
-                          logo: 'https://upload.wikimedia.org/wikipedia/commons/4/4d/O%27Reilly_Media_logo.svg'
+                          logo: oreillyLogo
                         },
                         { 
                           name: 'DevOps Engineering', 
                           date: '2023',
                           image: 'https://placehold.co/800x600/0077b6/ffffff?text=O%27Reilly+DevOps',
-                          logo: 'https://upload.wikimedia.org/wikipedia/commons/4/4d/O%27Reilly_Media_logo.svg'
+                          logo: oreillyLogo
                         },
                         { 
                           name: 'Cloud Security', 
                           date: '2023',
                           image: 'https://placehold.co/800x600/0077b6/ffffff?text=O%27Reilly+Cloud+Security',
-                          logo: 'https://upload.wikimedia.org/wikipedia/commons/4/4d/O%27Reilly_Media_logo.svg'
+                          logo: oreillyLogo
                         }
                       ].map((cert) => (
                         <motion.div
@@ -1422,7 +1423,7 @@ const Home: React.FC = () => {
                           className="bg-[#caf0f8]/50 rounded-xl p-3 cursor-pointer hover:bg-[#caf0f8] transition-colors"
                         >
                           <div className="flex items-start gap-3">
-                            <img src="https://upload.wikimedia.org/wikipedia/commons/4/4d/O%27Reilly_Media_logo.svg" alt={cert.name} className="w-8 h-8" />
+                            <img src={oreillyLogo} alt={cert.name} className="w-8 h-8" />
                             <div className="flex-1">
                               <h4 className="text-sm font-medium text-[#03045e]">{cert.name}</h4>
                               <p className="text-xs text-[#0077b6]">{cert.date}</p>
@@ -1490,8 +1491,8 @@ const Home: React.FC = () => {
       </section>
 
       {/* Blog Section */}
-        <section id="blog" className="py-20 relative">
-          <div className="absolute inset-0 bg-gradient-to-br from-[#b8e9f5]/20 to-[#e0f7ff]/20 dark:from-black/20 dark:to-[#03045e]/20 opacity-30"></div>
+      <section id="blog" className="py-20 relative">
+        <div className="absolute inset-0 bg-gradient-to-br from-[#e0f7ff]/20 to-[#b8e9f5]/20 dark:from-[#03045e]/20 dark:to-black/20 opacity-30"></div>
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -1506,132 +1507,162 @@ const Home: React.FC = () => {
             <div className="w-24 h-1 bg-gradient-to-r from-[#0077b6] to-[#90e0ef] mx-auto rounded-full"></div>
           </motion.div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="flex overflow-x-auto pb-8 gap-4 sm:gap-6 md:gap-8 snap-x snap-mandatory">
             {/* Blog Post 1 */}
-            <motion.article
+            <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: 0.1 }}
-              className="bg-[#90e0ef] rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300"
+              className="group relative flex-none w-[280px] sm:w-[320px] md:w-[350px] h-auto min-h-[450px] md:h-[500px] snap-center"
             >
-              <div className="p-6">
-                <div className="flex items-center gap-2 mb-4">
-                  <span className="px-3 py-1 text-sm font-medium text-[#0077b6] bg-[#caf0f8] rounded-full">
-                    Cloud Computing
-                  </span>
-                  <span className="text-sm text-[#03045e]">
-                    5 min read
-                  </span>
+              <div className="bg-[#90e0ef] rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-all duration-300 h-full flex flex-col">
+                <div className="relative h-40 sm:h-44 md:h-48 overflow-hidden">
+                  <img
+                    src="https://placehold.co/800x600/0077b6/ffffff?text=Rate+Limiting"
+                    alt="Rate Limiting Article"
+                    className="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-300"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-[#03045e]/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
                 </div>
-                <h3 className="text-xl font-semibold text-[#03045e] mb-3">
-                  Building Scalable Applications with AWS Lambda
-                </h3>
-                <p className="text-[#03045e] mb-4">
-                  Learn how to leverage AWS Lambda for building serverless applications that scale automatically...
-                </p>
-                <div className="flex items-center justify-between">
-                  <span className="text-sm text-[#03045e]">
-                    March 15, 2024
-                  </span>
-                  <a
-                    href="https://medium.com/@yourusername/building-scalable-applications-with-aws-lambda"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="text-[#0077b6] hover:text-[#03045e] font-medium flex items-center gap-2"
-                  >
-                    Read More
-                    <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14 5l7 7m0 0l-7 7m7-7H3" />
-                    </svg>
-                  </a>
+                <div className="p-4 sm:p-5 md:p-6 flex-1 flex flex-col">
+                  <div className="flex items-center gap-2 mb-4">
+                    <span className="px-3 py-1 text-sm font-medium text-[#0077b6] bg-[#caf0f8] rounded-full">
+                      Backend
+                    </span>
+                    <span className="text-sm text-[#03045e]">
+                      10 min read
+                    </span>
+                  </div>
+                  <h3 className="text-lg sm:text-xl font-bold text-[#03045e] mb-2">
+                    Unlocking Resilience: Why Distributed Rate Limiting with Redis Is Critical for Modern APIs
+                  </h3>
+                  <p className="text-sm sm:text-base text-[#03045e] mb-4 flex-1">
+                    A comprehensive guide to implementing distributed rate limiting using Redis, ensuring your APIs remain resilient and scalable...
+                  </p>
+                  <div className="flex justify-between items-center mt-auto">
+                    <a
+                      href="https://tanyaaaaa.medium.com/unlocking-resilience-why-distributed-rate-limiting-with-redis-is-critical-for-modern-apis-8e474aa59bfe"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="text-sm sm:text-base text-[#0077b6] hover:text-[#03045e] font-medium flex items-center gap-1 sm:gap-2"
+                    >
+                      Read Article
+                      <svg className="w-3 h-3 sm:w-4 sm:h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14 5l7 7m0 0l-7 7m7-7H3" />
+                      </svg>
+                    </a>
+                    <span className="text-sm text-[#03045e]">
+                      May 16, 2024
+                    </span>
+                  </div>
                 </div>
               </div>
-            </motion.article>
+            </motion.div>
 
             {/* Blog Post 2 */}
-            <motion.article
+            <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: 0.2 }}
-              className="bg-[#90e0ef] rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300"
+              className="group relative flex-none w-[280px] sm:w-[320px] md:w-[350px] h-auto min-h-[450px] md:h-[500px] snap-center"
             >
-              <div className="p-6">
-                <div className="flex items-center gap-2 mb-4">
-                  <span className="px-3 py-1 text-sm font-medium text-[#0077b6] bg-[#caf0f8] rounded-full">
-                    DevOps
-                  </span>
-                  <span className="text-sm text-[#03045e]">
-                    8 min read
-                  </span>
+              <div className="bg-[#90e0ef] rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-all duration-300 h-full flex flex-col">
+                <div className="relative h-40 sm:h-44 md:h-48 overflow-hidden">
+                  <img
+                    src="https://placehold.co/800x600/0077b6/ffffff?text=CI+CD"
+                    alt="CI/CD Article"
+                    className="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-300"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-[#03045e]/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
                 </div>
-                <h3 className="text-xl font-semibold text-[#03045e] mb-3">
-                  Implementing CI/CD with GitHub Actions
-                </h3>
-                <p className="text-[#03045e] mb-4">
-                  A comprehensive guide to setting up continuous integration and deployment pipelines using GitHub Actions...
-                </p>
-                <div className="flex items-center justify-between">
-                  <span className="text-sm text-[#03045e]">
-                    March 10, 2024
-                  </span>
-                  <a
-                    href="https://medium.com/@yourusername/implementing-ci-cd-with-github-actions"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="text-[#0077b6] hover:text-[#03045e] font-medium flex items-center gap-2"
-                  >
-                    Read More
-                    <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14 5l7 7m0 0l-7 7m7-7H3" />
-                    </svg>
-                  </a>
+                <div className="p-4 sm:p-5 md:p-6 flex-1 flex flex-col">
+                  <div className="flex items-center gap-2 mb-4">
+                    <span className="px-3 py-1 text-sm font-medium text-[#0077b6] bg-[#caf0f8] rounded-full">
+                      DevOps
+                    </span>
+                    <span className="text-sm text-[#03045e]">
+                      8 min read
+                    </span>
+                  </div>
+                  <h3 className="text-lg sm:text-xl font-bold text-[#03045e] mb-2">
+                    Implementing CI/CD with GitHub Actions
+                  </h3>
+                  <p className="text-sm sm:text-base text-[#03045e] mb-4 flex-1">
+                    A comprehensive guide to setting up continuous integration and deployment pipelines using GitHub Actions...
+                  </p>
+                  <div className="flex justify-between items-center mt-auto">
+                    <a
+                      href="https://tanyaaaaa.medium.com/implementing-ci-cd-with-github-actions"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="text-sm sm:text-base text-[#0077b6] hover:text-[#03045e] font-medium flex items-center gap-1 sm:gap-2"
+                    >
+                      Read Article
+                      <svg className="w-3 h-3 sm:w-4 sm:h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14 5l7 7m0 0l-7 7m7-7H3" />
+                      </svg>
+                    </a>
+                    <span className="text-sm text-[#03045e]">
+                      March 10, 2024
+                    </span>
+                  </div>
                 </div>
               </div>
-            </motion.article>
+            </motion.div>
 
             {/* Blog Post 3 */}
-            <motion.article
+            <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: 0.3 }}
-              className="bg-[#90e0ef] rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300"
+              className="group relative flex-none w-[280px] sm:w-[320px] md:w-[350px] h-auto min-h-[450px] md:h-[500px] snap-center"
             >
-              <div className="p-6">
-                <div className="flex items-center gap-2 mb-4">
-                  <span className="px-3 py-1 text-sm font-medium text-[#0077b6] bg-[#caf0f8] rounded-full">
-                    Kubernetes
-                  </span>
-                  <span className="text-sm text-[#03045e]">
-                    10 min read
-                  </span>
+              <div className="bg-[#90e0ef] rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-all duration-300 h-full flex flex-col">
+                <div className="relative h-40 sm:h-44 md:h-48 overflow-hidden">
+                  <img
+                    src="https://placehold.co/800x600/0077b6/ffffff?text=Kubernetes"
+                    alt="Kubernetes Article"
+                    className="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-300"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-[#03045e]/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
                 </div>
-                <h3 className="text-xl font-semibold text-[#03045e] mb-3">
-                  Kubernetes Best Practices for Production
-                </h3>
-                <p className="text-[#03045e] mb-4">
-                  Essential tips and best practices for running Kubernetes clusters in production environments...
-                </p>
-                <div className="flex items-center justify-between">
-                  <span className="text-sm text-[#03045e]">
-                    March 5, 2024
-                  </span>
-                  <a
-                    href="https://medium.com/@yourusername/kubernetes-best-practices-for-production"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="text-[#0077b6] hover:text-[#03045e] font-medium flex items-center gap-2"
-                  >
-                    Read More
-                    <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14 5l7 7m0 0l-7 7m7-7H3" />
-                    </svg>
-                  </a>
+                <div className="p-4 sm:p-5 md:p-6 flex-1 flex flex-col">
+                  <div className="flex items-center gap-2 mb-4">
+                    <span className="px-3 py-1 text-sm font-medium text-[#0077b6] bg-[#caf0f8] rounded-full">
+                      Kubernetes
+                    </span>
+                    <span className="text-sm text-[#03045e]">
+                      10 min read
+                    </span>
+                  </div>
+                  <h3 className="text-lg sm:text-xl font-bold text-[#03045e] mb-2">
+                    Kubernetes Best Practices for Production
+                  </h3>
+                  <p className="text-sm sm:text-base text-[#03045e] mb-4 flex-1">
+                    Essential tips and best practices for running Kubernetes clusters in production environments...
+                  </p>
+                  <div className="flex justify-between items-center mt-auto">
+                    <a
+                      href="https://tanyaaaaa.medium.com/kubernetes-best-practices-for-production"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="text-sm sm:text-base text-[#0077b6] hover:text-[#03045e] font-medium flex items-center gap-1 sm:gap-2"
+                    >
+                      Read Article
+                      <svg className="w-3 h-3 sm:w-4 sm:h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14 5l7 7m0 0l-7 7m7-7H3" />
+                      </svg>
+                    </a>
+                    <span className="text-sm text-[#03045e]">
+                      March 5, 2024
+                    </span>
+                  </div>
                 </div>
               </div>
-            </motion.article>
+            </motion.div>
           </div>
 
           <motion.div
@@ -1642,7 +1673,7 @@ const Home: React.FC = () => {
             className="text-center mt-12"
           >
             <a
-              href="https://medium.com/@yourusername"
+              href="https://tanyaaaaa.medium.com"
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center gap-2 px-6 py-3 bg-gradient-to-r from-[#0077b6] to-[#90e0ef] text-white rounded-full hover:from-[#03045e] hover:to-[#0077b6] transition-all duration-300 shadow-lg hover:shadow-xl"

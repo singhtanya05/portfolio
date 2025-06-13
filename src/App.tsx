@@ -2,7 +2,6 @@ import { ThemeProvider } from './context/ThemeContext';
 import Navbar from './components/Navbar';
 import Home from './pages/Home';
 import ThemeToggle from './components/ThemeToggle';
-import VisitCounter from './components/VisitCounter';
 import './App.css';
 
 function App() {
@@ -13,7 +12,6 @@ function App() {
         <Navbar isHomePage={true} />
         <main className="relative">
           <Home />
-          <VisitCounter />
         </main>
       </div>
     </ThemeProvider>
