@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { motion, AnimatePresence, useScroll, useTransform } from 'framer-motion';
+import { motion, useScroll, useTransform } from 'framer-motion';
 import { FaGithub, FaLinkedin, FaEnvelope, FaAws, FaGoogle, FaDocker, FaTimes, FaFileDownload } from 'react-icons/fa';
 import { TypeAnimation } from 'react-type-animation';
 import photo from '../assets/photo.jpg';
