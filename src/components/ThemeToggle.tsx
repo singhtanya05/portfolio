@@ -12,7 +12,6 @@ const ThemeToggle: React.FC = () => {
       whileTap={{ scale: 0.95 }}
       onClick={toggleTheme}
       className="fixed bottom-6 right-6 p-2.5 rounded-full bg-white/80 dark:bg-dark-secondary/80 backdrop-blur-sm shadow-lg border border-gray-200/50 dark:border-gray-700/50 hover:shadow-xl transition-all duration-300 z-[100]"
-      style={{ position: 'fixed', bottom: '1.5rem', right: '1.5rem' }}
       aria-label="Toggle theme"
     >
       <motion.div
