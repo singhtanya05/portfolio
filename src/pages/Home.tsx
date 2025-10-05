@@ -460,7 +460,7 @@ const Home: React.FC = () => {
                               </motion.a>
                               <motion.a
                                 href="/resume.pdf"
-                                download
+                                download="Tanya_Resume.pdf"
                                 whileHover={{ scale: 1.2, y: -5, rotate: -5 }}
                                 whileTap={{ scale: 0.9 }}
                                 className="relative group"
@@ -975,7 +975,7 @@ const Home: React.FC = () => {
                   <span className="text-sm text-[#03045e]">BlackNGreen</span>
                 </div>
                 <div className="space-y-2">
-                  <p className="text-sm text-[#03045e]">
+                  {/* <p className="text-sm text-[#03045e]"> 
                     • Architected and developed event-driven microservices for AI assistant systems using Spring Boot and Kafka
                   </p>
                   <p className="text-sm text-[#03045e]">
@@ -983,7 +983,7 @@ const Home: React.FC = () => {
                   </p>
                   <p className="text-sm text-[#03045e]">
                     • Implemented containerization using Docker and Kubernetes for streamlined deployments
-                  </p>
+                  </p> */}
                 </div>
               </div>
             </motion.div>
@@ -1007,7 +1007,7 @@ const Home: React.FC = () => {
                   </h3>
                   <span className="text-sm text-[#03045e]">Tata Consultancy Services</span>
                 </div>
-                <div className="space-y-2">
+                {/* <div className="space-y-2">
                   <p className="text-sm text-[#03045e]">
                     • Developed and optimized Java backend applications, achieving 30% performance improvement
                   </p>
@@ -1017,7 +1017,7 @@ const Home: React.FC = () => {
                   <p className="text-sm text-[#03045e]">
                     • Reduced resource consumption by 25% through code optimization
                   </p>
-                </div>
+                </div> */}
               </div>
             </motion.div>
 
@@ -1040,7 +1040,7 @@ const Home: React.FC = () => {
                   </h3>
                   <span className="text-sm text-[#03045e]">Tata Consultancy Services</span>
                 </div>
-                <div className="space-y-2">
+                {/* <div className="space-y-2">
                   <p className="text-sm text-[#03045e]">
                     • Contributed to Java backend development and maintenance of enterprise applications
                   </p>
@@ -1050,7 +1050,7 @@ const Home: React.FC = () => {
                   <p className="text-sm text-[#03045e]">
                     • Collaborated with senior developers to implement new features and bug fixes
                   </p>
-                </div>
+                </div> */}
               </div>
             </motion.div>
 
@@ -1073,14 +1073,14 @@ const Home: React.FC = () => {
                   </h3>
                   <span className="text-sm text-[#03045e]">Cadence</span>
                 </div>
-                <div className="space-y-2">
+                {/* <div className="space-y-2">
                   <p className="text-sm text-[#03045e]">
                     • Managed version control and documentation using project management tools
                   </p>
                   <p className="text-sm text-[#03045e]">
                     • Collaborated with cross-functional teams on technical documentation
                   </p>
-                </div>
+                </div> */}
               </div>
             </motion.div>
 
@@ -1103,14 +1103,14 @@ const Home: React.FC = () => {
                   </h3>
                   <span className="text-sm text-[#03045e]">Suncity Real Estate</span>
                 </div>
-                <div className="space-y-2">
+                {/* <div className="space-y-2">
                   <p className="text-sm text-[#03045e]">
                     • Developed custom software solutions under senior engineer guidance
                   </p>
                   <p className="text-sm text-[#03045e]">
                     • Implemented bug fixes and performance improvements
                   </p>
-                </div>
+                </div> */}
               </div>
             </motion.div>
           </div>
